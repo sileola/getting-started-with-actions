@@ -51,4 +51,7 @@ jobs:
           echo 6. Where are the Selenium jars?
           echo $SELENIUM_JAR_PATH
           echo
+          echo What is the workspace location?
+          echo $RUNNER_WORKSPACE
+          echo
           
