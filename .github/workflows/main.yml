@@ -48,4 +48,7 @@ jobs:
           echo 5. Where is the Android SDK Root?
           echo $ANDROID_SDK_ROOT
           echo
+          echo 6. Where are the Selenium jars?
+          echo $SELENIUM_JAR_PATH
+          echo
           
