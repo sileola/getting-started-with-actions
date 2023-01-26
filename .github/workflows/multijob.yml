@@ -35,7 +35,7 @@ jobs:
       - name: Step 5 - Check Windows Execution Policy
         run: |
           echo Here is the Windows ExecutionPolicy:
-          Get -ExectionPolicy
+          Get-ExectionPolicy
           
       - name: Step 6 - List Windows Environment Variables
         run: env
