@@ -1,0 +1,79 @@
+# This is a basic workflow to help you get started with Actions
+
+name: MULTI OS WORKFLOW
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+jobs:
+  # This first job on this workflow is called "build-on-ubuntu"
+  build-on-ubuntu:
+    # The job will run on ubuntu-latest
+    runs-on: ubuntu-latest
+
+# Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+        
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Step 1 - Checkoout the main GitHub branch
+        uses: actions/checkout@v3
+
+      - name: Step 2 - Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Step 3 - Have GitHub Actions Build Maven Project
+        run: mvn -B package --file pom.xml
+  
+      - name: Step 4 - List Windows Environment Variables
+        run: env
+        
+        
+  build-on-windows:
+    # The job will run on windows-latest
+    runs-on: windows-latest
+
+# Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+        
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Step 1 - Checkoout the main GitHub branch
+        uses: actions/checkout@v3
+
+      - name: Step 2 - Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Step 3 - Have GitHub Actions Build Maven Project
+        run: mvn -B package --file pom.xml
+  
+      - name: Step 4 - List Windows Environment Variables
+        run: env
+        
+        
+  build-on-macos:
+    # The job will run on ubuntu-latest
+    runs-on: macos-latest
+
+# Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+        
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Step 1 - Checkoout the main GitHub branch
+        uses: actions/checkout@v3
+
+      - name: Step 2 - Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Step 3 - Have GitHub Actions Build Maven Project
+        run: mvn -B package --file pom.xml
+  
+      - name: Step 4 - List Windows Environment Variables
+        run: env
