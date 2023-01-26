@@ -33,4 +33,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Display the content of this folder
-          la -a
+          ls -a
